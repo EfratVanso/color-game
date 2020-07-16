@@ -15,6 +15,7 @@ for(var i=0; i< squares.length; i++){
     if (clickedColor === pickedColor){
         messageDisplay.textContent = "Correct";
         changeColors(clickedColor);
+        document.querySelector("h1").style.backgroundColor = clickedColor;
     }
     else{
         this.style.backgroundColor = "#232323";
@@ -41,7 +42,6 @@ function generateRandomColors(num){
     for (let i = 0; i < num; i++) {
         arr[i] = randomColor();
     }
-   
     return arr;
 }
 
