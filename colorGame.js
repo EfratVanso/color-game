@@ -69,7 +69,16 @@ $("#reset").click(function() {
 $("#easyBtn").click(function() {
     $("#easyBtn").addClass("selected");
     $("#hardBtn").removeClass("selected");
-
+    colors = generateRandomColors(3);
+    pickedColor = pickColor();
+    colorDisplay.textContent = pickedColor;
+    for (let i = 0; i < squares.length; i++) {
+        if(colors[i]){
+            squares[i].style.backgroundColor = colors[i];
+        }else{
+            squares[i].style.display = "none";
+        }
+    }
 });
 
 $("#hardBtn").click(function() {
