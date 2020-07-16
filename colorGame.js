@@ -55,7 +55,8 @@ function randomColor(){
     return "rgb("+r+", "+g+", "+b+")";
 }
 
-function newColors(){
+//button reset event
+$("#reset").click(function() {
     colors = generateRandomColors(6);
     pickedColor = pickColor();
     colorDisplay.textContent = pickedColor;
@@ -63,4 +64,16 @@ function newColors(){
             squares[i].style.backgroundColor = colors[i];        
         }
     h1.style.backgroundColor = "#232323";
-}
+});
+
+$("#easyBtn").click(function() {
+    $("#easyBtn").addClass("selected");
+    $("#hardBtn").removeClass("selected");
+
+});
+
+$("#hardBtn").click(function() {
+    $("#hardBtn").addClass("selected");
+    $("#easyBtn").removeClass("selected");
+
+});
