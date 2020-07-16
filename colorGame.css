@@ -12,6 +12,12 @@ body{
     margin: 0 auto;
     max-width: 680px;
 }
-h1, #message{
+h1{
     color: white;
+}
+#stripe{
+    background: white;
+    height: 30px;
+    text-align: center;
+    color: black;
 }
