@@ -7,7 +7,7 @@ var colors = [
     "rgb(255, 0, 255)",
 ];
 var squares = document.querySelectorAll(".square");
-var pickedColor = colors[3];
+var pickedColor = pickColor();
 var colorDisplay = document.getElementById("colorDisplay");
 colorDisplay.textContent = pickedColor;
 
@@ -37,3 +37,7 @@ function changeColors(color){
     //squares.style.backgroundColor = "red";
 }
 
+function pickColor(){
+    var random = Math.floor(Math.random() * colors.length);
+    return colors[random];
+}
