@@ -25,7 +25,9 @@ for(var i=0; i< squares.length; i++){
     else{
         this.style.backgroundColor = "#232323";
         messageDisplay.textContent = "Try Again";
-    }
+    }//if
+     blinkMessage();
+
 });
 }//for 
 
@@ -65,7 +67,10 @@ $("#reset").click(function() {
         for (let i = 0; i < squares.length; i++) {
             squares[i].style.backgroundColor = colors[i];        
         }
-    h1.style.backgroundColor = "#232323";
+    h1.style.backgroundColor = "steelblue";
+    $("#message").text("");
+    $("#reset").text("New Colors");
+
 });
 
 $("#easyBtn").click(function() {
@@ -82,7 +87,8 @@ $("#easyBtn").click(function() {
             squares[i].style.display = "none";
         }
     }
-    h1.style.backgroundColor = "#232323";
+    h1.style.backgroundColor = "steelblue";
+    $("#message").text("");
 });
 
 $("#hardBtn").click(function() {
@@ -96,5 +102,21 @@ $("#hardBtn").click(function() {
         squares[i].style.backgroundColor = colors[i];
         squares[i].style.display = "block";
     }
-    h1.style.backgroundColor = "#232323";
+    h1.style.backgroundColor = "steelblue";
+    $("#message").text("");
 });
+
+function blinkMessage()  {
+    $("#message").css("color", "red");
+    $("#message").css("font-size","22px");
+    setInterval(function(){ 
+        $("#message").css("color", "black");
+        $("#message").css("font-size","16px");
+     }, 300);
+
+    // $("#message").addClass("blink");
+    // setInterval(function(){ 
+    //     $("#message").removeClass("blink");
+    //  }, 600);
+
+}
