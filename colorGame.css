@@ -12,6 +12,6 @@ body{
     margin: 0 auto;
     max-width: 680px;
 }
-h1{
+h1, #message{
     color: white;
 }

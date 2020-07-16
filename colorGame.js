@@ -11,6 +11,8 @@ var pickedColor = colors[3];
 var colorDisplay = document.getElementById("colorDisplay");
 colorDisplay.textContent = pickedColor;
 
+var messageDisplay = document.querySelector("#message");
+
 for(var i=0; i< squares.length; i++){
     squares[i].style.backgroundColor = colors[i];
 
@@ -21,7 +23,8 @@ for(var i=0; i< squares.length; i++){
         alert("correct");
     }
     else{
-        alert("wrong");
+        this.style.backgroundColor = "#232323";
+        messageDisplay.textContent = "Try Again";
     }
 });
 }
