@@ -103,10 +103,7 @@ $("#reset").click(function () {
 });
 
 function blinkMessage() {
-  $("#message").css("color", "red");
-  $("#message").css("font-size", "22px");
-  setInterval(function () {
-    $("#message").css("color", "black");
-    $("#message").css("font-size", "16px");
-  }, 300);
+$("#message").animate({fontSize: "1.5em",letterSpacing: "+=10px" },200,function(){
+    $("#message").animate({fontSize: "1em" ,letterSpacing: "-=10px" },200)
+    });
 }
